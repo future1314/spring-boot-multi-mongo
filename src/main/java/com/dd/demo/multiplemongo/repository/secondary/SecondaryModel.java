@@ -1,4 +1,4 @@
-package com.marcosbarbero.wd.multiplemongo.repository.secondary;
+package com.dd.demo.multiplemongo.repository.secondary;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

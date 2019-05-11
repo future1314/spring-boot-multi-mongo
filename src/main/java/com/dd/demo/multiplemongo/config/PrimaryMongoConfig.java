@@ -1,15 +1,15 @@
-package com.marcosbarbero.wd.multiplemongo.config;
+package com.dd.demo.multiplemongo.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
-import static com.marcosbarbero.wd.multiplemongo.config.PrimaryMongoConfig.MONGO_TEMPLATE;
+import static com.dd.demo.multiplemongo.config.PrimaryMongoConfig.MONGO_TEMPLATE;
 
 /**
  * @author dd
  */
 @Configuration
-@EnableMongoRepositories(basePackages = "com.marcosbarbero.wd.multiplemongo.repository.primary",
+@EnableMongoRepositories(basePackages = "com.dd.demo.multiplemongo.repository.primary",
         mongoTemplateRef = MONGO_TEMPLATE)
 public class PrimaryMongoConfig {
 

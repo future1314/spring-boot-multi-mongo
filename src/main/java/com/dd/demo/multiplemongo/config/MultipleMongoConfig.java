@@ -1,8 +1,7 @@
-package com.marcosbarbero.wd.multiplemongo.config;
+package com.dd.demo.multiplemongo.config;
 
 import com.mongodb.MongoClient;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.mongo.MongoProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -19,7 +18,7 @@ import lombok.RequiredArgsConstructor;
  */
 @Configuration
 @RequiredArgsConstructor//
-@EnableConfigurationProperties(MultipleMongoProperties.class)
+@EnableConfigurationProperties(MultipleMongoProperties.class)///注入文件
 public class MultipleMongoConfig {
 
     private final MultipleMongoProperties mongoProperties;
@@ -27,7 +26,7 @@ public class MultipleMongoConfig {
     @Primary
     @Bean(name = PrimaryMongoConfig.MONGO_TEMPLATE)
     public MongoTemplate primaryMongoTemplate() throws Exception {
-        return new MongoTemplate(primaryFactory(this.mongoProperties.getPrimary()));
+        return new MongoTemplate(primaryFactory(this.mongoProperties.getPrimary()));//primary属性
     }
 
     @Bean(name = SecondaryMongoConfig.MONGO_TEMPLATE)

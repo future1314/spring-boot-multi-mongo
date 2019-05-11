@@ -1,4 +1,4 @@
-package com.marcosbarbero.wd.multiplemongo;
+package com.dd.demo.multiplemongo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

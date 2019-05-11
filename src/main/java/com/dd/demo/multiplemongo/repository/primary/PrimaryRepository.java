@@ -1,4 +1,4 @@
-package com.marcosbarbero.wd.multiplemongo.repository.primary;
+package com.dd.demo.multiplemongo.repository.primary;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 

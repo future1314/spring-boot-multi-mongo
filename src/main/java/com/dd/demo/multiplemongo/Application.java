@@ -1,9 +1,9 @@
-package com.marcosbarbero.wd.multiplemongo;
+package com.dd.demo.multiplemongo;
 
-import com.marcosbarbero.wd.multiplemongo.repository.primary.PrimaryModel;
-import com.marcosbarbero.wd.multiplemongo.repository.primary.PrimaryRepository;
-import com.marcosbarbero.wd.multiplemongo.repository.secondary.SecondaryModel;
-import com.marcosbarbero.wd.multiplemongo.repository.secondary.SecondaryRepository;
+import com.dd.demo.multiplemongo.repository.primary.PrimaryRepository;
+import com.dd.demo.multiplemongo.repository.primary.PrimaryModel;
+import com.dd.demo.multiplemongo.repository.secondary.SecondaryModel;
+import com.dd.demo.multiplemongo.repository.secondary.SecondaryRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -34,9 +34,9 @@ public class Application implements CommandLineRunner {
         log.info("************************************************************");
         log.info("Start printing mongo objects");
         log.info("************************************************************");
-        this.primaryRepository.save(new PrimaryModel(null, "Primary database plain object"));
+        this.primaryRepository.save(new PrimaryModel("12", "Primary database plain object"));//如果不指定ID，id 是自动生成的。
 
-        this.secondaryRepository.save(new SecondaryModel(null, "Secondary database plain object"));
+        this.secondaryRepository.save(new SecondaryModel("34", "Secondary database plain object"));
 
         List<PrimaryModel> primaries = this.primaryRepository.findAll();
         for (PrimaryModel primary : primaries) {
