@@ -34,9 +34,9 @@ public class Application implements CommandLineRunner {
         log.info("************************************************************");
         log.info("Start printing mongo objects");
         log.info("************************************************************");
-        this.primaryRepository.save(new PrimaryModel("12", "Primary database plain object"));//如果不指定ID，id 是自动生成的。
+        this.primaryRepository.save(new PrimaryModel("12", "Primary database plain object12"));//如果不指定ID，id 是自动生成的。
 
-        this.secondaryRepository.save(new SecondaryModel("34", "Secondary database plain object"));
+        this.secondaryRepository.save(new SecondaryModel("34", "Secondary database plain object34"));///如果id存在则更新，【已验证】
 
         List<PrimaryModel> primaries = this.primaryRepository.findAll();
         for (PrimaryModel primary : primaries) {
