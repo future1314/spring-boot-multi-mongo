@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 import static com.marcosbarbero.wd.multiplemongo.config.PrimaryMongoConfig.MONGO_TEMPLATE;
 
 /**
- * @author Marcos Barbero
+ * @author dd
  */
 @Configuration
 @EnableMongoRepositories(basePackages = "com.marcosbarbero.wd.multiplemongo.repository.primary",

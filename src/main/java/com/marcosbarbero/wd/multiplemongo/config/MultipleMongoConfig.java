@@ -15,10 +15,10 @@ import org.springframework.data.mongodb.core.SimpleMongoDbFactory;
 import lombok.RequiredArgsConstructor;
 
 /**
- * @author Marcos Barbero
+ * @author dd
  */
 @Configuration
-@RequiredArgsConstructor
+@RequiredArgsConstructor//
 @EnableConfigurationProperties(MultipleMongoProperties.class)
 public class MultipleMongoConfig {
 

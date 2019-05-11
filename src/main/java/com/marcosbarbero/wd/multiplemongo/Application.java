@@ -26,10 +26,11 @@ public class Application implements CommandLineRunner {
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
+        log.info("----------main---------");//后执行
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) throws Exception {//run是执行入口
         log.info("************************************************************");
         log.info("Start printing mongo objects");
         log.info("************************************************************");

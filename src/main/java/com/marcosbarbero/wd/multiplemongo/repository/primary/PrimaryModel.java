@@ -8,7 +8,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
- * @author Marcos Barbero
+ * @author dd
  */
 @Data
 @AllArgsConstructor
